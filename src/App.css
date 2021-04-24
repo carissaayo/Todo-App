@@ -1,0 +1,396 @@
+.App {
+  text-align: center;
+  font-size: 18px;
+  height: 800px;
+}
+.attribution {
+  position: relative;
+    top: -783px;
+  font-size: 14px;
+  color: var(--VeryLightGray);
+}
+:root {
+  /* dark theme colors */
+  --veryDarkBlue: hsl(235, 21%, 11%);
+  --veryDarkDesaturatedBlue: hsl(235, 24%, 19%);
+  --lightGrayishBlue: hsl(234, 39%, 85%);
+  --LightGrayishBlueHover: hsl(236, 33%, 92%);
+  --DarkGrayishBlue: hsl(234, 11%, 52%);
+  --VeryDarkGrayishBlue: hsl(233, 14%, 35%);
+  --VeryDarkGrayishBlue2: hsl(237, 14%, 26%);
+
+  /* light theme colors */
+   --BrightBlue:hsl(220, 98%, 61%);
+  --VeryLightGray: hsl(0, 0%, 98%);
+  --VeryLightGrayishBlue: hsl(236, 33%, 92%);
+  --LightGrayishBlue: hsl(233, 11%, 84%);
+  --DarkGrayishBlueL: hsl(236, 9%, 61%);
+  --VeryDarkGrayishBlueL: hsl(235, 19%, 35%);
+}
+
+/* Light theme Styles */
+body {
+  width: 100%;
+  margin: 0;
+  position: relative;
+  background-color: var(--VeryLightGray);
+  height: 100%;
+}
+.main-con {
+  font-size: 18px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("images/bg-desktop-light.jpg");
+}
+.header {
+  padding-top: 50px;
+  text-align: center;
+  height: 250px;
+  width: 70%;
+  position: relative;
+  left: 12.6%;
+  margin-bottom: 20px;
+}
+.header div img {
+  margin-bottom: 10px;
+}
+.header div {
+  display: flex;
+  justify-content: space-between;
+  width: 58%;
+  align-items: center;
+  margin-left: 21%;
+}
+.header div h4 {
+  color: var(--VeryLightGray);
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+}
+.header form input {
+  margin-left: 1%;
+  font-size: 20px;
+  color: var(--VeryDarkGrayishBlueL);
+  width: 51%;
+  border-radius: 6px;
+  border-color: var(--VeryLightGray);
+  padding: 10px 40px 10px 60px;
+  height: 40px;
+}
+.header form input:focus {
+  border-color: var(--VeryLightGray);
+}
+.header-form {
+  width: 100%;
+}
+
+.item {
+  padding-left: 5%;
+  color: var(--VeryDarkGrayishBlueL);
+  display: flex;
+  width: 95%;
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--LightGrayishBlue);
+}
+
+.list-item {
+  width: 65%;
+  margin-left: -20%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.check-con {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid var(--VeryLightGray);
+  cursor: pointer;
+}
+
+.show-check-con {
+  background-image: linear-gradient(
+    to left,
+    hsl(280, 87%, 65%),
+    hsl(192, 100%, 67%)
+  );
+  border: 1px solid hsl(192, 100%, 67%);
+}
+.check {
+  width: 70%;
+}
+.strike-item {
+  text-decoration: line-through;
+  color: var(--DarkGrayishBlueL);
+}
+.cross {
+  margin-right: 2%;
+  cursor: pointer;
+}
+.list-item-button:hover {
+  cursor: pointer;
+}
+
+.todo-list {
+  position: absolute;
+  height: auto;
+  width: 42%;
+  top: 255px;
+  left: 27%;
+  text-align: center;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 2px 10px 10px var(--DarkGrayishBlueL);
+  margin-bottom: 20px;
+}
+.control-list {
+  font-size: 14px;
+  list-style-type: none;
+  padding-left: 6%;
+  width: 90%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.control-list > li:first-child {
+  margin-right: 10%;
+  color: var(--DarkGrayishBlueL);
+  cursor: pointer;
+}
+
+.control-list > li:last-child {
+  margin-right: -1%;
+  margin-left: 10%;
+  color: var(--DarkGrayishBlueL);
+}
+.control {
+  cursor: pointer;
+  text-transform: capitalize;
+  border: 0px;
+}
+
+.control:hover {
+  color: var( --BrightBlue);
+}
+.core-controls {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  color: var(--VeryDarkGrayishBlueL);
+}
+.control-list > li:first-child:hover {
+  color:  var( --BrightBlue);
+}
+
+.control-list > li:last-child:hover {
+  color:  var( --BrightBlue);
+}
+/* End of Light Theme Styles */
+
+/* Dark Theme Styles */
+body.dark {
+  background-color: var( --veryDarkBlue);
+}
+.dark .main-con {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("images/bg-desktop-dark.jpg");
+}
+.dark .header form input {
+  background-color: var(--veryDarkDesaturatedBlue);
+  color: var(--lightGrayishBlue);
+  border: 0px var(--veryDarkDesaturatedBlue);
+}
+.dark .header form input:focus{
+border-color: var(--veryDarkDesaturatedBlue);
+}
+.dark .todo-list {
+  background-color: var(--veryDarkDesaturatedBlue);
+  box-shadow: none;
+}
+.dark .check-con {
+ background-color: 1px solid var(--DarkGrayishBlue);
+ border-color: var( --VeryDarkGrayishBlue);
+}
+
+.dark .list-item {
+ color:var(--VeryLightGrayishBlue)
+}
+.dark .strike-item {
+  color: var(--DarkGrayishBlue);
+}
+.item {
+  border-bottom: 1px solid var( --VeryDarkGrayishBlue2);
+}
+.dark .core-controls {
+ background-color: var(--veryDarkDesaturatedBlue);
+ box-shadow: none;
+}
+.dark .attribution a{
+  color: var(--lightGrayishBlue);
+}
+/* End of Dark Theme Styles */
+
+@media screen and (max-width: 1320px) {
+  .header {
+    width: 67%;
+    left: 13.7%;
+  }
+  .header div {
+    width: 61%;
+    margin-left: 19%;
+  }
+}
+@media screen and (max-width: 1084px) {
+  .header div {
+    width: 61%;
+    margin-left: 50%;
+  }
+  .control-list li:first-child {
+    margin-right: 7%;
+  }
+  .control-list li:last-child {
+    margin-right: -1%;
+    margin-left: 7%;
+  }
+}
+@media screen and (max-width: 1275px) {
+  .todo-list {
+    width: 42.5%;
+    left: 26.5%;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .todo-list {
+    width: 43.5%;
+    left: 25.5%;
+  }
+  .header div {
+    width: 65%;
+    margin-left: 17%;
+  }
+}
+
+@media screen and (max-width: 945px) {
+  .todo-list {
+    width: 45.5%;
+    left: 25.5%;
+  }
+
+  .control-list li:first-child {
+    margin-right: 0%;
+  }
+  .control-list li:last-child {
+    margin-right: -0.5%;
+    margin-left: 0%;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .App {
+    text-align: center;
+    font-size: 14px;
+    overflow: hidden;
+  }
+
+  .todo-list {
+    width: 46.5%;
+    left: 25%;
+  }
+
+  .control-list li:first-child {
+    margin-right: 0%;
+  }
+  .control-list li:last-child {
+    margin-right: -0.5%;
+    margin-left: 0%;
+  }
+  .list-item {
+    width: 65%;
+    margin-left: -15%;
+    text-align: left;
+    cursor: pointer;
+  }
+  .cross {
+    margin-right: 3%;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .control-list {
+    position: relative;
+  }
+  .core-controls {
+    position: absolute;
+    top: 84px;
+    left: 0.9%;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 2px 10px 10px hsl(236, 9%, 61%);
+    width: 102%;
+    height: 50px;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .core-controls li:first-child {
+    margin-left: 3%;
+  }
+  .core-controls li:nth-child(2) {
+    margin-left: -10%;
+  }
+  .core-controls li:last-child {
+    margin-left: -12%;
+  }
+  .header {
+    left: 14.6%;
+    width: 66%;
+  }
+  .header div {
+    width: 72%;
+    margin-left: 14%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .header div {
+    width: 65%;
+    margin-left: 18%;
+  }
+  .header {
+    left: -11.4%;
+    width: 122%;
+  }
+  .header div h4 {
+    font-size: 2.2rem;
+  }
+
+  .todo-list {
+    width: 79.5%;
+    left: 10.5%;
+  }
+  .control-list li:first-child {
+    margin-right: 0%;
+  }
+  .control-list li:last-child {
+    margin-right: -0.5%;
+    margin-left: 0%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .header {
+    left: -9.4%;
+    width: 117%;
+  }
+  .header form input {
+    width: 45%;
+  }
+}
